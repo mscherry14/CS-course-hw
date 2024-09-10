@@ -24,7 +24,7 @@ _UpgradeReport_Files/
 # Directories #
 ###############
 bin/
-obj/
+**/obj
 TestResults/
 ###################
 # Web publish log #
@@ -261,3 +261,5 @@ FakesAssemblies/
 
 # Visual Studio 6 workspace options file
 *.opt
+
+.idea/
