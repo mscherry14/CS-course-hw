@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using PasswordHW1;
+
+namespace PasswordHW1;
 
 class Program
 {

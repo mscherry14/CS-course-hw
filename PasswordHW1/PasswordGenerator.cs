@@ -24,7 +24,7 @@ public class PasswordGenerator
         List<char> output = new List<char>();
         int letters = _rnd.Next(2, max);
         int upperLetters = _rnd.Next(2, letters);
-        for (int i = 0; i < max; i++)
+        for (int i = 0; i < letters; i++)
         {
             output.Add(i < upperLetters ? 
                 Char.ToUpper(alphabet[_rnd.Next(alphabet.Length)]) : 
@@ -36,6 +36,11 @@ public class PasswordGenerator
 
     private List<char> AddNumbers(int length, ref char[] otherPassword)
     {
+        if (length == 0)
+        {
+            return new List<char>(otherPassword);
+        }
+
         //индексы для вставки чисел между символами
         int[] positions = Enumerable.Range(0, otherPassword.Length + 1).ToArray();
         string numbers = "0123456789";
